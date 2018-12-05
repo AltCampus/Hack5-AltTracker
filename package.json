@@ -1,0 +1,26 @@
+{
+  "name": "Hack5-AltTracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AltCampus/Hack5-AltTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AltCampus/Hack5-AltTracker/issues"
+  },
+  "homepage": "https://github.com/AltCampus/Hack5-AltTracker#readme",
+  "dependencies": {
+    "nodemon": "^1.18.7",
+    "parcel-bundler": "^1.10.3"
+  }
+}

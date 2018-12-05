@@ -21,7 +21,8 @@ function addEvent(e) {
 
   var eventBlock = document.querySelector(".event");  
   
-  event.eName = eventName.value;
+  event.event_name = eventName.value;
+  event.date = String(new Date());
   eventBlock.style.display = "none";
 
   var teamBlock = document.querySelector(".input-team");
@@ -36,9 +37,10 @@ function addTeams(e) {
   eventNameDisplay.textContent = event.eName;
   
   let team = teamName.value;
-  let tName = taskName.value;
+  let tName = taskName.value;  
+
   
-  event.teams.push({tName: team, teamMembers: newArr, taskName: tName });
+  event.teams.push({teamMembers: newArr, team_name: team , team_task: tName, done:false });
 
   newArr = [];
 

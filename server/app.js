@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const fs = require('fs');
 
-
 function errLog(req, res, next) {
 	let errStr = `Method - ${req.method} , URL - ${req.url}, Date - ${new Date()} \n`;
 
@@ -44,7 +43,7 @@ const Event = mongoose.model('Event', event);
 app.get('/', (req, res) => {
 	Event.find({}, (err, data) => {
 		if(err) return res.sendStatus(404);
-		return res.send(data)
+		return res.json(data)
 	}) 
 })
 
@@ -57,18 +56,22 @@ app.post('/', (req, res) => {
 				return res.sendStatus(404);
 			} else {
 				Event.find({}, (err, data) => {
-					return res.send(data)
+					return res.json(data)
 				})
 			}
 	})
 })
 
-app.post('/:id', (req, res) => {
+app.get('/:id', (req, res) => {
 	const id = req.params.id;
 	console.log(id);
 
 	Event.findOne({_id : id}, (err, data) => {
-		res.send(data);
+		if(data) {
+			res.json(data)
+		}else {
+			res.sendStatus(404);
+		}
 	})
 
 })

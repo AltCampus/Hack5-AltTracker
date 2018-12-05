@@ -85,7 +85,7 @@
    	font-size: 12px;
    }
 
-   h1, h2, h3, h4, h5, h6, p, a {
+   h1, h2, h3, h4, h5, h6, a {
    	font-family: 'Source Sans Pro', sans-serif;
    }
 
@@ -98,69 +98,60 @@
 
    /* Header */
 
+   .header {
+   	background-color: #20345D;
+   	position: relative;
+   }
+
    .header__logo {
-   	width: 35%;
+   	width: 10%;
    	padding: 20px;
-   	margin-bottom: 40px;
    }
 
    .header h1 {
-   	font-size: 2em;
-   	color: rgb(32, 52, 93);
-   	font-weight: 700;
-   	line-height: 1.5;
+   	font-size: 3em;
+   	color: rgb(48, 186, 103);
+   	font-weight: 900;
    	text-align: center;
+   	letter-spacing: 2px;
+   	margin-bottom: 50px;
+   }
+
+   .header__text{
+   	position: absolute;
+   	top: 50%;
+   	left: 50%;
+   	transform: translate(-50%, -50%);
    }
 
    /* Add Event | Event Form */
-
 
    label {
    	font-size: 1.7em;
    	font-weight: 700;
    	margin-left: 5px;
    	display: block;
-   	/*margin-top: 40px;*/
    	color: rgb(32, 52, 93);
    	padding-bottom: 15px;
    }
 
-
    input[type=text], textarea {
    	width: 100%; 
    	padding: 20px;   
-   	border: 1px solid darkblue; 
+   	border: 1px solid #20345D; 
    	border-radius: 5px; 
    	margin-top: 6px; 
-   	margin-bottom: 16px; 
+   	margin-bottom: 15px; 
    	display: block;
    	cursor: auto;
    	color: rgba(255, 255, 255, 0.60);
-   	color: white;
+   	color: #20345D;
+   	font-size: 1.5em;
    }
 
    /* Buttons */
 
-   #team-members{
-   	width: 75%;
-   	display: inline-block;
-   }
-
-   .event__btn {
-   	background-color: rgb(48, 186, 103);
-   	border: .5px solid rgba(255, 255, 255, 0.35);
-   	color: white;
-   	padding: 20px;
-   	text-align: center;
-   	cursor: auto;
-   	border-radius: 4px;
-   	line-height: 2;
-   	font-weight: 600;
-   	letter-spacing: 2px;
-   	margin-bottom: 50px;
-   }
-
-    .team__btn {
+   .event__btn,.team__btn,.input-team__btn,.submit__btn {
    	background-color: rgb(48, 186, 103);
    	border: .5px solid rgba(255, 255, 255, 0.35);
    	color: white;
@@ -171,43 +162,19 @@
    	line-height: 2;
    	font-weight: 600;
    	letter-spacing: 2px;
-   	margin-top: 15px;
-   	/*margin-right: 100px;*/
-   	margin-left: 15px;
-   	display: inline-block;
    }
 
-   .input-team__btn {
-   	background-color: rgb(48, 186, 103);
-   	border: .5px solid rgba(255, 255, 255, 0.35);
-   	color: white;
-   	padding: 20px;
-   	text-align: center;
-   	cursor: auto;
-   	border-radius: 4px;
-   	line-height: 2;
-   	font-weight: 600;
-   	letter-spacing: 2px;
-   	margin-top: 15px;
-   	margin-right: 100px;
+   .team__btn,.input-team__btn {
+   	margin-left: 122px;
+   	margin-top: 20px;
    }
 
-    .submit__btn {
+   .submit__btn {
    	background-color: #20345D;
-   	border: .5px solid rgba(255, 255, 255, 0.35);
-   	color: white;
-   	padding: 20px 63px;
-   	text-align: center;
-   	cursor: auto;
-   	border-radius: 4px;
-   	line-height: 2;
-   	font-weight: 600;
-   	letter-spacing: 2px;
-   	margin-top: 15px;
-   	margin-right: 100px;
+   	padding: 10px 198px;
+   	margin-top: 20px;
+   	margin-left: 122px;
    }
-
-
 
    /* Ongoing Events */
 
@@ -230,6 +197,7 @@
    	margin: 2%;
    	padding: 28px 0;
    	text-align: center;
+   	box-shadow: 2px 2px 2px .8px #47484B;
    	background: -webkit-linear-gradient(to bottom, #20345D, #30BA67);
    	background: -moz-linear-gradient(to bottom, #20345D, #30BA67);
    	background: linear-gradient(to bottom, #20345D, #30BA67);
@@ -247,23 +215,27 @@
    	font-size: 1.8em;
    }
 
-  /* Ongoing Events */
-
-   .ongoing-events h2 {
+   .ongoing-events h2,.input-team h2 {
    	font-size: 1.9em;
    	color: rgb(32, 52, 93);
    	font-weight: 700;
    	line-height: 1.5;
-   	padding-bottom: 50px;
+   	padding: 50px 0;
    }
 
-	/* Event Page - Input Details */
+   /* Footer */
 
-	  .input-team h2 {
-   	font-size: 1.9em;
-   	color: rgb(32, 52, 93);
-   	font-weight: 700;
-   	line-height: 1.5;
-		padding: 50px 0;
+   footer {
+   	background-color: rgb(48, 186, 103); 
+   	margin-top: 50px;
+   	text-align: center;
    }
+
+   small {
+   	font-size: 1.4em;
+   	color: rgb(32, 52, 93);  
+   	line-height: 4;
+   }
+
+
 

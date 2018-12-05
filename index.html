@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>AltTracker</title>
 		<link rel="stylesheet" href="public/assets/stylesheet/style.css">
+		<link rel="shortcut icon" href="public/assets/media/favicon.png" type="image/x-icon"/>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
 	</head>
 	<body>
@@ -13,7 +14,7 @@
 		<header class="header">
 			<div class="wrapper">
 				<nav class="nav">
-					<h1 class="header__logo"><img src="public/assets/media/logo.svg" alt="logo"><br>Track on AltTracker</h1>
+					<h1 class="header__logo"><img src="public/assets/media/logo.svg" alt="logo"><br></h1>
 				</nav>
 			</div>
 		</header>
@@ -23,9 +24,9 @@
 			<section>
 				<div class="wrapper">
 					<div class="event">
-  					<form action="action_page.php">
+  					<form action="">
     					<label for="event-name">Event Name</label>
-    					<input type="text" id="event-name" name="event-name">
+    					<input type="text" id="event-name" name="event-name"placeholder="enter event name">
     					<button class="event__btn">ADD EVENT</button>
     				</form>
     			</div>
@@ -35,12 +36,13 @@
 			<section>
 				<div class="wrapper">
 					<div class="ongoing-events">
-  					<ul class="ongoing-events__list">
-							<li><a href="#">HACKATHON</a></li>
-							<li><a href="#">TALK</a></li>
-							<li><a href="#">HOUSEKEEPING</a></li>
-							<li><a href="#">ENCORE</a></li>
-						</ul>
+						<h2>=== Ongoing Events ===</h2>
+  						<ul class="ongoing-events__list">
+								<li><a href="#">HACKATHON</a></li><!-- 
+								 --><li><a href="#">TALK</a></li><!-- 
+								 --><li><a href="#">HOUSEKEEPING</a></li><!-- 
+								 --><li><a href="#">ENCORE</a></li>
+							</ul>
     			</div>
 				</div>
 			</section>
@@ -48,64 +50,25 @@
 			<section>
 				<div class="wrapper">
 					<div class="input-team">
-						<h2>Event Name</h2>
-  						<form action="action_page.php">
+						<h2>=== Event ===</h2>
+  						<form action="">
   							<label for="team-name">Team Name</label>
-    						<input type="text" id="team-name" name="team-name">
+    						<input type="text" id="team-name" name="team-name"placeholder="enter team name">
     						<label for="task-name">Task Name</label>
-    						<input type="text" id="task-name" name="task-name">
-    						<label for="team-members">Team Members</label>
-    						<input type="text" id="team-members" name="team-members">
-    						<button class="team__btn">ADD MORE TEAMS</button>
-    						<button class="input-team__btn">SUBMIT EVENT</button>
+    						<input type="text" id="task-name" name="task-name"placeholder="enter task name">
+    						<label for="team-members">Team Member</label>
+    						<input type="text" id="team-members" name="team-members"placeholder="enter member name">
+    						<button class="team__btn">ADD MEMBER</button><br>
+    						<button class="input-team__btn">ADD MORE TEAMS</button><br>
+    						<button class="submit__btn">SUBMIT</button>
     					</form>
     			</div>
 				</div>
 			</section>
-
-<!-- 			<section>
-				<div class="wrapper">
-					<div class="ongoing-events">
-  					<ul class="ongoing-events__list">
-							<li><a href="#">HACKATHON</a></li>
-							<li><a href="#">TALK</a></li>
-							<li><a href="#">HOUSEKEEPING</a></li>
-							<li><a href="#">ENCORE</a></li>
-						</ul>
-    			</div>
-				</div>
-			</section> -->
-
-
-<!-- 			<section>
-				<div class="wrapper">
-					<div class="Event">
-  					<form action="action_page.php">
-    					<label for="event">Event</label>
-    					<input type="text" id="event" name="event">
-    					<label for="email">Email</label>
-    					<input type="text" id="email" name="email">
-    					<label for="message">Message</label>
-    					<textarea id="message" name="message"></textarea>
-    					<button class="btn-tertiary">SUBMIT</button>
-    				</form>
-    			</div>
-				</div>
-			</section> -->
-
-				
-
-			<!-- Secondary Section -->
-			
-			<!-- Tertiary Section -->
-			
-			<!-- Card Section -->
-			
 		</main>
-
 		<footer>
 			<div>
-				<!-- <small>© UNTITLED. ALL RIGHTS RESERVED. | </small> -->
+				<small>© ALL RIGHTS RESERVED.</small>
 			</div>
 		</footer>
 		<script type="text/javascript" src="/public/assets/src/main.js"></script>

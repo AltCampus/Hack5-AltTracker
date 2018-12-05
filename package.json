@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AltCampus/Hack5-AltTracker#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongoose": "^5.3.14",
     "nodemon": "^1.18.7",

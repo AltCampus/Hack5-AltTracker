@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors')
 const fs = require('fs');
 
 function errLog(req, res, next) {
@@ -16,7 +17,7 @@ function errLog(req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}))
 app.use(errLog)
-
+app.use(cors())
 
 const port = 4001;
 
@@ -55,7 +56,9 @@ app.post('/', (req, res) => {
 			if(err) {
 				return res.sendStatus(404);
 			} else {
+				console.log(data);
 				Event.find({}, (err, data) => {
+					console.log("submitted");
 					return res.json(data)
 				})
 			}

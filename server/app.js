@@ -53,15 +53,15 @@ app.post('/', (req, res) => {
 	const newEvent = new Event(data);
 	
 	newEvent.save((err, data) => {
-			if(err) {
-				return res.sendStatus(404);
-			} else {
-				console.log(data);
-				Event.find({}, (err, data) => {
-					console.log("submitted");
-					return res.json(data)
-				})
-			}
+		const currentEvent = data;
+		if(err) {
+			return res.sendStatus(404);
+		} else {
+			Event.find({}, (err, data) => {
+				console.log("submitted");
+				return res.json(data);
+			})
+		}
 	})
 })
 

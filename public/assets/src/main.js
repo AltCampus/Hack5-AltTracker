@@ -7,25 +7,30 @@ const eventBtn = document.querySelector(".event__btn");
 const eventName = document.querySelector("#event-name");
 const addMoreTeams = document.querySelector(".team__btn__more");
 const displayMembers = document.querySelector(".member-lists");
+const eventBlock = document.querySelector(".event");  
+const teamBlock = document.querySelector(".input-team");
+const ongoingEvents = document.querySelector(".ongoing-events");
+
+var newArr = [];
 
 let event = {
   event_name: "",
   teams: []
 };
 
-var newArr = [];
-
-
 function addEvent(e) {
   e.preventDefault();
-  var eventBlock = document.querySelector(".event");  
+  
   
   event.event_name = eventName.value;
   event.date = String(new Date());
-  eventBlock.style.display = "none";
-
-  var teamBlock = document.querySelector(".input-team");
+  
   teamBlock.style.display = "block";  
+  eventBlock.style.display = "none";
+  ongoingEvents.style.display = "none";
+
+  var eventNameDisplay = document.querySelector('.event-name-display');
+  eventNameDisplay.textContent = event.event_name + " Event";
 }
 
 
@@ -33,33 +38,30 @@ function addTeams(e) {
   
   e.preventDefault();
   
-  var eventNameDisplay = document.querySelector('.event-name-display');
-  eventNameDisplay.textContent = event.event_name + " Event";
   
   let team = teamName.value;
   let tName = taskName.value;  
   
+  console.log(newArr);
   
   event.teams.push({teamMembers: newArr, team_name: team , team_task: tName, done: false });
 
-  newArr = [];
-
+  
   teamName.value = "";
-  taskName.value = "";
-
+  newArr = [];
 }
 
 function addMembers(e) {
   e.preventDefault();
   var newDiv = document.createElement("div");
-  var i = document.createElement("i");
+  // var i = document.createElement("i");
   
   newDiv.textContent = teamMembers.value;
-  i.className = "fas fa-user-minus";
+  // i.className = "fas fa-user-minus";
 
   newArr.push(teamMembers.value);
   displayMembers.appendChild(newDiv);
-  displayMembers.appendChild(i);
+  // displayMembers.appendChild(i);
   
   teamMembers.value = "";
 }
@@ -77,8 +79,11 @@ function submitEvent(e) {
 
   fetch('http://192.168.0.118:4001/').then(d => d.json()).then(d => console.log(d));
 
-  console.log("Submitted: " + event);
-  
+  console.log("Submitted: ", event);
+
+  teamBlock.style.display = "none";  
+  eventBlock.style.display = "block";
+  ongoingEvents.style.display = "block";  
 }
 
 addMoreTeams.addEventListener("click", addTeams);

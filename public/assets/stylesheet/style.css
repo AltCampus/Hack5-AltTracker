@@ -18,35 +18,35 @@
    figure, figcaption, footer, header, hgroup, 
    menu, nav, output, ruby, section, summary,
    time, mark, audio, video {
-   	margin: 0;
-   	padding: 0;
-   	border: 0;
-   	font-size: 100%;
-   	font: inherit;
-   	vertical-align: baseline;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
    }
    /* HTML5 display-role reset for older browsers */
    article, aside, details, figcaption, figure, 
    footer, header, hgroup, menu, nav, section {
-   	display: block;
+      display: block;
    }
    body {
-   	line-height: 1;
+      line-height: 1;
    }
    ol, ul {
-   	list-style: none;
+      list-style: none;
    }
    blockquote, q {
-   	quotes: none;
+      quotes: none;
    }
    blockquote:before, blockquote:after,
    q:before, q:after {
-   	content: '';
-   	content: none;
+      content: '';
+      content: none;
    }
    table {
-   	border-collapse: collapse;
-   	border-spacing: 0;
+      border-collapse: collapse;
+      border-spacing: 0;
    }
 
    /*  Main CSS  */
@@ -54,74 +54,74 @@
 
    /*  General CSS  */
    *, *:before, *:after {
-   	box-sizing: border-box;
+      box-sizing: border-box;
    }
 
    .cf:before, .cf:after{
-   	content: "";
-   	display: table;
+      content: "";
+      display: table;
    }
 
    .cf:after{
-   	clear:both;
+      clear:both;
    }
 
    .cf{
-   	clear:both;
+      clear:both;
    } 
 
    .cf{
-   	*zoom:1;
+      *zoom:1;
    } 
 
    .group:after {
-   	content: "";
-   	display: table;
-   	clear: both;
+      content: "";
+      display: table;
+      clear: both;
    }
 
    body {
-   	font-family: 'Source Sans Pro', sans-serif;
-   	font-size: 12px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 12px;
    }
 
    h1, h2, h3, h4, h5, h6, a {
-   	font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
    }
 
 
    .wrapper {
-   	max-width: 680px;
-   	width: 100%;
-   	margin: 0 auto;
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
    }
 
    /* Header */
 
    .header {
-   	background-color: #20345D;
-   	position: relative;
+      background-color: #20345D;
+      position: relative;
    }
 
    .header__logo {
-   	width: 10%;
+      width: 10%;
       padding: 20px;
    }
 
 
    .header h1 {
-   	font-size: 3em;
-   	color: rgb(48, 186, 103);
-   	font-weight: 900;
-   	text-align: center;
-   	letter-spacing: 2px;
+      font-size: 3em;
+      color: rgb(48, 186, 103);
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 2px;
    }
 
    .header__text{
-   	position: absolute;
-   	top: 50%;
-   	left: 50%;
-   	transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
 
    .login__btn,.cancel__btn {
@@ -150,92 +150,73 @@
 
    input [type=text], input {
       border: 3px solid #f1f1f1;
-   }*/
+   }
 
-
+*/
 
 
    /* Add Event | Event Form */
 
    label {
-   	font-size: 1.7em;
-   	font-weight: 700;
-      /*margin-top: 30px;*/
-   	margin-left: 5px;
-   	display: block;
-   	color: rgb(32, 52, 93);
-   	padding-bottom: 15px;
+      font-size: 1.7em;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-left: 5px;
+      display: block;
+      color: rgb(32, 52, 93);
+      padding-bottom: 15px;
    }
 
 
 
    input[type=text], textarea {
-   	width: 100%; 
-   	padding: 20px;   
-   	border: 1px solid #20345D; 
-   	border-radius: 5px; 
-   	margin-top: 6px; 
-   	margin-bottom: 15px; 
-   	display: block;
-   	cursor: auto;
-   	color: rgba(255, 255, 255, 0.60);
-<<<<<<< HEAD
-   	color: #20345D;
-   	font-size: 1.5em;
-=======
-   	color: darkblue;
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316
+      width: 100%; 
+      padding: 20px;   
+      border: 1px solid #20345D; 
+      border-radius: 5px; 
+      margin-top: 6px; 
+      margin-bottom: 15px; 
+      display: block;
+      cursor: auto;
+      color: rgba(255, 255, 255, 0.60);
+      color: #20345D;
+      font-size: 1.5em;
    }
 
    /* Buttons */
 
-<<<<<<< HEAD
    .event__btn,.team__btn,.input-team__btn,.submit__btn {
-   	background: rgba(48, 186, 103, 0.8);
-=======
-   #team-members{
-   	width: 100%;
-   	display: inline-block;
-   }
-	 .member-lists div{
-		font-size: 20px;
-		padding: 5px 20px;
-		background: rgb(204, 203, 203);
-		margin: 5px;
-	 }
-   .event__btn {
-   	background-color: rgb(48, 186, 103);
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316
-   	border: .5px solid rgba(255, 255, 255, 0.35);
-   	color: white;
-   	padding: 10px 18px;
-   	text-align: center;
-   	cursor: pointer;
-   	border-radius: 4px;
-   	line-height: 2;
-   	font-weight: 600;
-   	letter-spacing: 2px;
-   	transition: 0.3s;
+      background: rgba(48, 186, 103, 0.8);
+      border: .5px solid rgba(255, 255, 255, 0.35);
+      color: white;
+      padding: 10px 18px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 4px;
+      line-height: 2;
+      font-weight: 600;
+      letter-spacing: 2px;
+      transition: 0.3s;
    }
 
    .team__btn {
-   	margin-left: 50px;
-   	margin-top: 20px;
-   	width: 40%;
+      margin-left: 50px;
+      margin-top: 20px;
+      width: 40%;
    }
 
    .input-team__btn {
-   	margin-left: 35px;
-   	margin-top: 20px;
-   	width: 40%;
+      margin-left: 35px;
+      margin-top: 20px;
+      width: 40%;
    }
 
    .submit__btn {
-   	background: rgba(32, 52, 93, 0.8);
-   	margin-top: 30px;
-   	margin-left: 210px;
-   	width: 40%;
-   	transition: 0.3s;
+      background: rgba(32, 52, 93, 0.8);
+      margin-top: 30px;
+      margin-left: 210px;
+      width: 40%;
+      transition: 0.3s;
    }
 
    .event__btn:hover,.team__btn:hover,.input-team__btn:hover,.login__btn:hover {background: rgba(48, 186, 103)}
@@ -245,66 +226,66 @@
    /* Ongoing Events */
 
    .ongoing-events ul {
-   	width: 680px;
-   	outline-style: double;
-   	outline-color: #20345D; 
-   	outline-width: 3px;
-   	background-color: rgba(48, 186, 103);
-   	padding: 20px;
-   	display: inline-block;
+      width: 680px;
+      outline-style: double;
+      outline-color: #20345D; 
+      outline-width: 3px;
+      background-color: rgba(48, 186, 103);
+      padding: 20px;
+      display: inline-block;
    }
 
    .ongoing-events li {
-   	border: 1px solid #20345D;
-   	border-radius: 4px;
-   	display: inline-block;
-   	cursor: pointer;
-   	width: 46%;
-   	height: 100px;
-   	margin: 2%;
-   	padding: 28px 0;
-   	text-align: center;
-   	box-shadow: 2px 2px 2px .8px #47484B;
-   	background: -webkit-linear-gradient(to bottom, #20345D, #30BA67);
-   	background: -moz-linear-gradient(to bottom, #20345D, #30BA67);
-   	background: linear-gradient(to bottom, #20345D, #30BA67);
+      border: 1px solid #20345D;
+      border-radius: 4px;
+      display: inline-block;
+      cursor: pointer;
+      width: 46%;
+      height: 100px;
+      margin: 2%;
+      padding: 28px 0;
+      text-align: center;
+      box-shadow: 2px 2px 2px .8px #47484B;
+      background: -webkit-linear-gradient(to bottom, #20345D, #30BA67);
+      background: -moz-linear-gradient(to bottom, #20345D, #30BA67);
+      background: linear-gradient(to bottom, #20345D, #30BA67);
    }
 
    .ongoing-events a {
-   	text-decoration: none;
-   	color: white;
-   	text-align: center;
-   	border-radius: 4px;
-   	line-height: 2;
-   	font-weight: 900;
-   	letter-spacing: 2px;
-   	font-size: 1.8em;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+      line-height: 2;
+      font-weight: 900;
+      letter-spacing: 2px;
+      font-size: 1.8em;
    }
 
    .ongoing-events h2,.input-team h2 {
-   	font-size: 1.9em;
-   	color: rgb(32, 52, 93);
-   	font-weight: 700;
-   	line-height: 1.5;
-   	padding: 50px 0;
+      font-size: 1.9em;
+      color: rgb(32, 52, 93);
+      font-weight: 700;
+      line-height: 1.5;
+      padding: 50px 0;
    }
 
    /* Footer */
 
-<<<<<<< HEAD
    footer {
-   	background-color: rgb(48, 186, 103); 
-   	margin-top: 50px;
-   	text-align: center;
+      background-color: rgb(48, 186, 103); 
+      margin-top: 50px;
+      text-align: center;
    }
 
    small {
-   	font-size: 1.4em;
-   	color: rgb(32, 52, 93);  
-   	line-height: 4;
+      font-size: 1.4em;
+      color: rgb(32, 52, 93);  
+      line-height: 4;
    }
 
    /* 404 Page */
+
 
    .errormessage {
       font-size: 3.5em;
@@ -315,16 +296,6 @@
       padding-top: 20px;
       text-align: center;
    }
-=======
-	  .input-team h2 {
-   	font-size: 1.9em;
-   	color: rgb(32, 52, 93);
-   	font-weight: 700;
-   	line-height: 1.5;
-		padding: 50px 0;
-	 }
-	 
-	 .input-team {
-		 display: none;
-	 }
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316
+
+
+}

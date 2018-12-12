@@ -10,7 +10,8 @@ const displayMembers = document.querySelector(".member-lists");
 const eventBlock = document.querySelector(".event");  
 const teamBlock = document.querySelector(".input-team");
 const ongoingEvents = document.querySelector(".ongoing-events");
-
+const displayEventList = document.querySelector("#display__events")
+var eventList = [];
 var newArr = [];
 
 let event = {
@@ -43,9 +44,6 @@ function addTeams(e) {
   let team = teamName.value;
   let tName = taskName.value;  
 
-  console.log("new array :", newArr);
-  
-  
   event.teams.push({teamMembers: newArr, team_name: team , team_task: tName, done: false });
 
   console.log("add teams ", event);
@@ -92,19 +90,24 @@ function removeMember(e) {
 function submitEvent(e) {
   e.preventDefault();
 
-  displayMembers.textContent = "";
+  let team = teamName.value;
+  let tName = taskName.value;  
+  event.teams.push({teamMembers: newArr, team_name: team , team_task: tName, done: false });
 
+  
   fetch('http://192.168.43.69:4001/api/event', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(event)
-  });
-
+  }).then(d => d.json()).then(d => {
+    eventList = [];
+    eventList = d; 
+    displayEvent(eventList)
+  });  
   
-  fetch('http://192.168.43.69:4001/api/events').then(d => d.json()).then(d => console.log(d));
-
+  displayMembers.textContent = "";
   teamName.value = "";
   taskName.value = "";
   eventName.value = "";
@@ -113,6 +116,24 @@ function submitEvent(e) {
   eventBlock.style.display = "block";
   ongoingEvents.style.display = "block";  
 }
+
+
+
+fetch('http://192.168.43.69:4001/api/events').then(d => d.json()).then(d => {eventList = d; displayEvent(eventList)});
+function displayEvent(d){
+  displayEventList.textContent = "";
+  d.forEach(v=>{
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+
+    li.className = "ongoing-events__list";    
+    li.appendChild(a);
+
+    a.textContent = `${v.event_name}`;
+    displayEventList.appendChild(li);
+  });
+}
+
 
 addMoreTeams.addEventListener("click", addTeams);
 eventBtn.addEventListener("click", addEvent);

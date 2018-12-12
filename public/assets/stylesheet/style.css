@@ -145,10 +145,15 @@
    /* Buttons */
 
    #team-members{
-   	width: 75%;
+   	width: 100%;
    	display: inline-block;
    }
-
+	 .member-lists div{
+		font-size: 20px;
+		padding: 5px 20px;
+		background: rgb(204, 203, 203);
+		margin: 5px;
+	 }
    .event__btn {
    	background-color: rgb(48, 186, 103);
    	border: .5px solid rgba(255, 255, 255, 0.35);
@@ -292,4 +297,8 @@
 	 }
 
 	 i.fa-window-close {
+	 }
+
+	 .ongoing-events__list a {
+		 text-transform: uppercase;
 	 }

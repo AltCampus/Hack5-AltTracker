@@ -117,6 +117,10 @@ var displayMembers = document.querySelector(".member-lists");
 var eventBlock = document.querySelector(".event");
 var teamBlock = document.querySelector(".input-team");
 var ongoingEvents = document.querySelector(".ongoing-events");
+<<<<<<< HEAD
+=======
+var displayEventList = document.querySelector("#display__events");
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
 var newArr = [];
 var event = {
   event_name: "",
@@ -125,7 +129,10 @@ var event = {
 
 function addEvent(e) {
   e.preventDefault();
+<<<<<<< HEAD
   if (/^ *$/.test(eventName.value)) return;
+=======
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
   event.event_name = eventName.value;
   event.date = String(new Date());
   teamBlock.style.display = "block";
@@ -137,24 +144,35 @@ function addEvent(e) {
 
 function addTeams(e) {
   e.preventDefault();
+<<<<<<< HEAD
   displayMembers.textContent = "";
   var team = teamName.value;
   var tName = taskName.value;
   console.log("new array :", newArr);
+=======
+  var team = teamName.value;
+  var tName = taskName.value;
+  console.log(newArr);
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
   event.teams.push({
     teamMembers: newArr,
     team_name: team,
     team_task: tName,
     done: false
   });
+<<<<<<< HEAD
   console.log("add teams ", event);
   teamName.value = "";
   taskName.value = "";
+=======
+  teamName.value = "";
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
   newArr = [];
 }
 
 function addMembers(e) {
   e.preventDefault();
+<<<<<<< HEAD
   var parentDiv = document.createElement("div");
   var childSpan = document.createElement("span");
   var childI = document.createElement("i");
@@ -190,10 +208,19 @@ function addMembers(e) {
       }
     }
   }
+=======
+  var newDiv = document.createElement("div"); // var i = document.createElement("i");
+
+  newDiv.textContent = teamMembers.value; // i.className = "fas fa-user-minus";
+
+  newArr.push(teamMembers.value);
+  displayMembers.appendChild(newDiv); // displayMembers.appendChild(i);
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
 
   teamMembers.value = "";
 }
 
+<<<<<<< HEAD
 function removeMember(e) {
   var deleteIndex = newArr.indexOf(this.previousElementSibling.innerText);
   var node = e.target.parentNode;
@@ -204,6 +231,10 @@ function removeMember(e) {
 function submitEvent(e) {
   e.preventDefault();
   displayMembers.textContent = "";
+=======
+function submitEvent(e) {
+  e.preventDefault();
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
   fetch('http://192.168.43.69:4001/api/event', {
     method: "POST",
     headers: {
@@ -214,16 +245,43 @@ function submitEvent(e) {
   fetch('http://192.168.43.69:4001/api/events').then(function (d) {
     return d.json();
   }).then(function (d) {
+<<<<<<< HEAD
     return console.log(d);
   });
   teamName.value = "";
   taskName.value = "";
   eventName.value = "";
+=======
+    eventList = d;
+    displayEvent(eventList);
+  });
+  console.log("Submitted: ", event);
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
   teamBlock.style.display = "none";
   eventBlock.style.display = "block";
   ongoingEvents.style.display = "block";
 }
 
+<<<<<<< HEAD
+=======
+var eventList = [];
+fetch('http://192.168.43.69:4001/api/events').then(function (d) {
+  return d.json();
+}).then(function (d) {
+  eventList = d;
+  displayEvent(eventList);
+});
+
+function displayEvent(d) {
+  eventList.forEach(function (v) {
+    var h3 = document.createElement("h3");
+    h3.textContent = "".concat(v.event_name);
+    displayEventList.appendChild(h3);
+  });
+}
+
+console.log("hello");
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
 addMoreTeams.addEventListener("click", addTeams);
 eventBtn.addEventListener("click", addEvent);
 memberSubmit.addEventListener("click", addMembers);
@@ -255,7 +313,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "46191" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46197" + '/');
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

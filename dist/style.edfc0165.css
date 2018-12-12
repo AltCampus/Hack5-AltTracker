@@ -31,7 +31,11 @@
    	display: block;
    }
    body {
+<<<<<<< HEAD
 		 line-height: 1;		 
+=======
+   	line-height: 1;
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
    }
    ol, ul {
    	list-style: none;
@@ -89,9 +93,12 @@
    	font-family: 'Source Sans Pro', sans-serif;
    }
 
+<<<<<<< HEAD
 	 input {
 		 color: #20345D;
 	 }
+=======
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
 
    .wrapper {
    	max-width: 680px;
@@ -145,10 +152,22 @@
    /* Buttons */
 
    #team-members{
+<<<<<<< HEAD
    	width: 75%;
    	display: inline-block;
    }
 
+=======
+   	width: 100%;
+   	display: inline-block;
+   }
+	 .member-lists div{
+		font-size: 20px;
+		padding: 5px 20px;
+		background: rgb(204, 203, 203);
+		margin: 5px;
+	 }
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61
    .event__btn {
    	background-color: rgb(48, 186, 103);
    	border: .5px solid rgba(255, 255, 255, 0.35);
@@ -273,6 +292,7 @@
 	 .input-team {
 		 display: none;
 	 }
+<<<<<<< HEAD
 
 	 .member-lists {
 		 margin-bottom: 20px;
@@ -293,3 +313,5 @@
 
 	 i.fa-window-close {
 	 }
+=======
+>>>>>>> 5f09b2a69b4cb5e5e6ccd5733c01e9d3b68d2d61

@@ -105,8 +105,9 @@
 
    .header__logo {
    	width: 10%;
-   	padding: 20px;
+      padding: 20px;
    }
+
 
    .header h1 {
    	font-size: 3em;
@@ -114,7 +115,6 @@
    	font-weight: 900;
    	text-align: center;
    	letter-spacing: 2px;
-   	margin-bottom: 50px;
    }
 
    .header__text{
@@ -124,16 +124,50 @@
    	transform: translate(-50%, -50%);
    }
 
+   .login__btn,.cancel__btn {
+      background: rgba(48, 186, 103, 0.8);
+      border: .5px solid rgba(255, 255, 255, 0.35);
+      color: white;
+      padding: 10px 18px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 4px;
+      line-height: 2;
+      font-weight: 600;
+      letter-spacing: 2px;
+      transition: 0.3s;
+      display: inline-block;
+      position: absolute;
+      top: 30%;
+      left: 93%;
+   }
+   
+   /* Modal Form */
+
+   form {
+      border: 3px solid #f1f1f1;
+   }
+
+   input [type=text], input {
+      border: 3px solid #f1f1f1;
+   }
+
+
+
+
    /* Add Event | Event Form */
 
    label {
    	font-size: 1.7em;
    	font-weight: 700;
+      margin-top: 30px;
    	margin-left: 5px;
    	display: block;
    	color: rgb(32, 52, 93);
    	padding-bottom: 15px;
    }
+
+
 
    input[type=text], textarea {
    	width: 100%; 
@@ -185,7 +219,7 @@
    	transition: 0.3s;
    }
 
-   .event__btn:hover,.team__btn:hover,.input-team__btn:hover {background: rgba(48, 186, 103)}
+   .event__btn:hover,.team__btn:hover,.input-team__btn:hover,.login__btn:hover {background: rgba(48, 186, 103)}
 
    .submit__btn:hover {background: rgba(32, 52, 93)}
 
@@ -250,5 +284,18 @@
    	line-height: 4;
    }
 
+   /* 404 Page */
 
 
+   .errormessage {
+      font-size: 3.5em;
+      background-color: rgb(32, 52, 93);
+      color: rgb(48, 186, 103);
+      font-weight: 700;
+      line-height: 1.5;
+      padding-top: 20px;
+      text-align: center;
+   }
+
+
+}

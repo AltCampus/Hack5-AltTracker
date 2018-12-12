@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="public/assets/stylesheet/style.css">
 		<link rel="shortcut icon" href="public/assets/media/favicon.png" type="image/x-icon"/>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	</head>
 	<body>
 		<!-- Header -->
@@ -37,6 +38,10 @@
       		</form> -->
 
       </div>
+				<nav class="nav">
+				<h1 class="header__logo"><img src="public/assets/media/logo.svg" alt="logo"><br></h1>
+				</nav>
+			</div>
 		</header>
 		<!-- Main -->
 		<main>
@@ -52,6 +57,29 @@
     			</div>
 				</div>
 			</section>
+			<!-- Event Page - Input Details -->
+			<section>
+				<div class="wrapper">
+					<div class="input-team">
+						<h2 class="event-name-display">Event Name</h2>
+  						<form action="">
+  							<label for="team-name">Team Name</label>
+    						<input type="text" id="team-name" name="team-name" placeholder="enter team name">
+    						<label for="task-name">Task Name</label>
+    						<input type="text" id="task-name" name="task-name" placeholder="enter task name">
+    						<label for="team-members">Team Members</label>
+								<input type="text" id="team-members" name="team-members" placeholder="enter member name">
+								<div class="member-lists">
+									
+								</div>
+								<button type="submit" id="member-submit" class="team__btn">ADD MEMBER</button><br>
+    						<button class="team__btn team__btn__more input-team__btn">ADD MORE TEAMS</button><br>
+    						<button class="submit__btn input-team__btn">SUBMIT EVENT</button>
+    					</form>
+    			</div>
+				</div>
+			</section>
+
 			<!-- Ongoing Events -->
 			<section>
 				<div class="wrapper">
@@ -91,6 +119,6 @@
 				<small>&#169; 2018 | AltCampions | All Rights Reserved</small>
 			</div>
 		</footer>
-		<script type="text/javascript" src="/public/assets/src/main.js"></script>
+		<script type="text/javascript" src="public/assets/src/main.js"></script>
 	</body>
 </html>

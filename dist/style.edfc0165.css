@@ -85,7 +85,7 @@
    	font-size: 12px;
    }
 
-   h1, h2, h3, h4, h5, h6, a {
+   h1, h2, h3, h4, h5, h6, p, a {
    	font-family: 'Source Sans Pro', sans-serif;
    }
 
@@ -98,101 +98,49 @@
 
    /* Header */
 
-   .header {
-   	background-color: #20345D;
-   	position: relative;
-   }
-
    .header__logo {
-   	width: 10%;
-      padding: 20px;
+   	width: 35%;
+   	padding: 20px;
+   	margin-bottom: 40px;
    }
-
 
    .header h1 {
-   	font-size: 3em;
-   	color: rgb(48, 186, 103);
-   	font-weight: 900;
+   	font-size: 2em;
+   	color: rgb(32, 52, 93);
+   	font-weight: 700;
+   	line-height: 1.5;
    	text-align: center;
-   	letter-spacing: 2px;
    }
-
-   .header__text{
-   	position: absolute;
-   	top: 50%;
-   	left: 50%;
-   	transform: translate(-50%, -50%);
-   }
-
-   .login__btn,.cancel__btn {
-      background: rgba(48, 186, 103, 0.8);
-      border: .5px solid rgba(255, 255, 255, 0.35);
-      color: white;
-      padding: 10px 18px;
-      text-align: center;
-      cursor: pointer;
-      border-radius: 4px;
-      line-height: 2;
-      font-weight: 600;
-      letter-spacing: 2px;
-      transition: 0.3s;
-      display: inline-block;
-      position: absolute;
-      top: 30%;
-      left: 93%;
-   }
-   
-   /* Modal Form */
-
-/*   form {
-      border: 3px solid #f1f1f1;
-   }
-
-   input [type=text], input {
-      border: 3px solid #f1f1f1;
-   }*/
-
-
-
 
    /* Add Event | Event Form */
+
 
    label {
    	font-size: 1.7em;
    	font-weight: 700;
-      /*margin-top: 30px;*/
    	margin-left: 5px;
    	display: block;
+   	/*margin-top: 40px;*/
    	color: rgb(32, 52, 93);
    	padding-bottom: 15px;
    }
 
 
-
    input[type=text], textarea {
    	width: 100%; 
    	padding: 20px;   
-   	border: 1px solid #20345D; 
+   	border: 1px solid darkblue; 
    	border-radius: 5px; 
    	margin-top: 6px; 
-   	margin-bottom: 15px; 
+   	margin-bottom: 16px; 
    	display: block;
    	cursor: auto;
    	color: rgba(255, 255, 255, 0.60);
-<<<<<<< HEAD
-   	color: #20345D;
-   	font-size: 1.5em;
-=======
    	color: darkblue;
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316
    }
 
    /* Buttons */
 
-<<<<<<< HEAD
-   .event__btn,.team__btn,.input-team__btn,.submit__btn {
-   	background: rgba(48, 186, 103, 0.8);
-=======
    #team-members{
    	width: 100%;
    	display: inline-block;
@@ -205,42 +153,66 @@
 	 }
    .event__btn {
    	background-color: rgb(48, 186, 103);
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316
    	border: .5px solid rgba(255, 255, 255, 0.35);
    	color: white;
-   	padding: 10px 18px;
+   	padding: 20px;
    	text-align: center;
-   	cursor: pointer;
+   	cursor: auto;
    	border-radius: 4px;
    	line-height: 2;
    	font-weight: 600;
    	letter-spacing: 2px;
-   	transition: 0.3s;
+   	margin-bottom: 50px;
    }
 
-   .team__btn {
-   	margin-left: 50px;
-   	margin-top: 20px;
-   	width: 40%;
+    .team__btn {
+   	background-color: rgb(48, 186, 103);
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 10px 18px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	/*margin-right: 100px;*/
+   	margin-left: 15px;
+   	display: inline-block;
    }
 
    .input-team__btn {
-   	margin-left: 35px;
-   	margin-top: 20px;
-   	width: 40%;
+   	background-color: rgb(48, 186, 103);
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 20px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	margin-right: 100px;
    }
 
-   .submit__btn {
-   	background: rgba(32, 52, 93, 0.8);
-   	margin-top: 30px;
-   	margin-left: 210px;
-   	width: 40%;
-   	transition: 0.3s;
+    .submit__btn {
+   	background-color: #20345D;
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 20px 63px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	margin-right: 100px;
    }
 
-   .event__btn:hover,.team__btn:hover,.input-team__btn:hover,.login__btn:hover {background: rgba(48, 186, 103)}
 
-   .submit__btn:hover {background: rgba(32, 52, 93)}
 
    /* Ongoing Events */
 
@@ -258,13 +230,11 @@
    	border: 1px solid #20345D;
    	border-radius: 4px;
    	display: inline-block;
-   	cursor: pointer;
    	width: 46%;
    	height: 100px;
    	margin: 2%;
    	padding: 28px 0;
    	text-align: center;
-   	box-shadow: 2px 2px 2px .8px #47484B;
    	background: -webkit-linear-gradient(to bottom, #20345D, #30BA67);
    	background: -moz-linear-gradient(to bottom, #20345D, #30BA67);
    	background: linear-gradient(to bottom, #20345D, #30BA67);
@@ -274,6 +244,7 @@
    	text-decoration: none;
    	color: white;
    	text-align: center;
+   	cursor: auto;
    	border-radius: 4px;
    	line-height: 2;
    	font-weight: 900;
@@ -281,41 +252,18 @@
    	font-size: 1.8em;
    }
 
-   .ongoing-events h2,.input-team h2 {
+  /* Ongoing Events */
+
+   .ongoing-events h2 {
    	font-size: 1.9em;
    	color: rgb(32, 52, 93);
    	font-weight: 700;
    	line-height: 1.5;
-   	padding: 50px 0;
+   	padding-bottom: 50px;
    }
 
-   /* Footer */
+	/* Event Page - Input Details */
 
-<<<<<<< HEAD
-   footer {
-   	background-color: rgb(48, 186, 103); 
-   	margin-top: 50px;
-   	text-align: center;
-   }
-
-   small {
-   	font-size: 1.4em;
-   	color: rgb(32, 52, 93);  
-   	line-height: 4;
-   }
-
-   /* 404 Page */
-
-   .errormessage {
-      font-size: 3.5em;
-      background-color: rgb(32, 52, 93);
-      color: rgb(48, 186, 103);
-      font-weight: 700;
-      line-height: 1.5;
-      padding-top: 20px;
-      text-align: center;
-   }
-=======
 	  .input-team h2 {
    	font-size: 1.9em;
    	color: rgb(32, 52, 93);
@@ -327,4 +275,3 @@
 	 .input-team {
 		 display: none;
 	 }
->>>>>>> 13d76bceb0d40f52ab79a41ecc1914bd20c40316

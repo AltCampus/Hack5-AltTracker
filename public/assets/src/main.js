@@ -130,6 +130,7 @@ function displayEvent(d){
     li.appendChild(a);
 
     a.textContent = `${v.event_name}`;
+    a.id = v._id;
     displayEventList.appendChild(li);
   });
 }

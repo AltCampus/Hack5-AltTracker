@@ -10,6 +10,7 @@ const displayMembers = document.querySelector(".member-lists");
 const eventBlock = document.querySelector(".event");  
 const teamBlock = document.querySelector(".input-team");
 const ongoingEvents = document.querySelector(".ongoing-events");
+const displayEventList = document.querySelector("#display__events")
 
 var newArr = [];
 
@@ -69,7 +70,7 @@ function addMembers(e) {
 function submitEvent(e) {
   e.preventDefault();
 
-  fetch('http://192.168.0.118:4001/', {
+  fetch('http://192.168.43.69:4001/api/event', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -77,7 +78,7 @@ function submitEvent(e) {
     body: JSON.stringify(event)
   });
 
-  fetch('http://192.168.0.118:4001/').then(d => d.json()).then(d => console.log(d));
+  fetch('http://192.168.43.69:4001/api/events').then(d => d.json()).then(d => {eventList = d; displayEvent(eventList)});
 
   console.log("Submitted: ", event);
 
@@ -86,6 +87,17 @@ function submitEvent(e) {
   ongoingEvents.style.display = "block";  
 }
 
+
+var eventList = [];
+fetch('http://192.168.43.69:4001/api/events').then(d => d.json()).then(d => {eventList = d; displayEvent(eventList)});
+function displayEvent(d){
+  eventList.forEach(v=>{
+    var h3 = document.createElement("h3");
+    h3.textContent = `${v.event_name}`;
+    displayEventList.appendChild(h3);
+  })
+}
+console.log("hello")
 addMoreTeams.addEventListener("click", addTeams);
 eventBtn.addEventListener("click", addEvent);
 memberSubmit.addEventListener("click", addMembers);

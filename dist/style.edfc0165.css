@@ -1,0 +1,295 @@
+/*   CSS Resets   */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   */
+
+   html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed, 
+   figure, figcaption, footer, header, hgroup, 
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+   	margin: 0;
+   	padding: 0;
+   	border: 0;
+   	font-size: 100%;
+   	font: inherit;
+   	vertical-align: baseline;
+   }
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure, 
+   footer, header, hgroup, menu, nav, section {
+   	display: block;
+   }
+   body {
+		 line-height: 1;		 
+   }
+   ol, ul {
+   	list-style: none;
+   }
+   blockquote, q {
+   	quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+   	content: '';
+   	content: none;
+   }
+   table {
+   	border-collapse: collapse;
+   	border-spacing: 0;
+   }
+
+   /*  Main CSS  */
+
+
+   /*  General CSS  */
+   *, *:before, *:after {
+   	box-sizing: border-box;
+   }
+
+   .cf:before, .cf:after{
+   	content: "";
+   	display: table;
+   }
+
+   .cf:after{
+   	clear:both;
+   }
+
+   .cf{
+   	clear:both;
+   } 
+
+   .cf{
+   	*zoom:1;
+   } 
+
+   .group:after {
+   	content: "";
+   	display: table;
+   	clear: both;
+   }
+
+   body {
+   	font-family: 'Source Sans Pro', sans-serif;
+   	font-size: 12px;
+   }
+
+   h1, h2, h3, h4, h5, h6, p, a {
+   	font-family: 'Source Sans Pro', sans-serif;
+   }
+
+	 input {
+		 color: #20345D;
+	 }
+
+   .wrapper {
+   	max-width: 680px;
+   	width: 100%;
+   	margin: 0 auto;
+   }
+
+   /* Header */
+
+   .header__logo {
+   	width: 35%;
+   	padding: 20px;
+   	margin-bottom: 40px;
+   }
+
+   .header h1 {
+   	font-size: 2em;
+   	color: rgb(32, 52, 93);
+   	font-weight: 700;
+   	line-height: 1.5;
+   	text-align: center;
+   }
+
+   /* Add Event | Event Form */
+
+
+   label {
+   	font-size: 1.7em;
+   	font-weight: 700;
+   	margin-left: 5px;
+   	display: block;
+   	/*margin-top: 40px;*/
+   	color: rgb(32, 52, 93);
+   	padding-bottom: 15px;
+   }
+
+
+   input[type=text], textarea {
+   	width: 100%; 
+   	padding: 20px;   
+   	border: 1px solid darkblue; 
+   	border-radius: 5px; 
+   	margin-top: 6px; 
+   	margin-bottom: 16px; 
+   	display: block;
+   	cursor: auto;
+   	color: rgba(255, 255, 255, 0.60);
+   	color: darkblue;
+   }
+
+   /* Buttons */
+
+   #team-members{
+   	width: 75%;
+   	display: inline-block;
+   }
+
+   .event__btn {
+   	background-color: rgb(48, 186, 103);
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 20px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-bottom: 50px;
+   }
+
+    .team__btn {
+   	background-color: rgb(48, 186, 103);
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 10px 18px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	/*margin-right: 100px;*/
+   	margin-left: 15px;
+   	display: inline-block;
+   }
+
+   .input-team__btn {
+   	background-color: rgb(48, 186, 103);
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 20px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	margin-right: 100px;
+   }
+
+    .submit__btn {
+   	background-color: #20345D;
+   	border: .5px solid rgba(255, 255, 255, 0.35);
+   	color: white;
+   	padding: 20px 63px;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 600;
+   	letter-spacing: 2px;
+   	margin-top: 15px;
+   	margin-right: 100px;
+   }
+
+
+
+   /* Ongoing Events */
+
+   .ongoing-events ul {
+   	width: 680px;
+   	outline-style: double;
+   	outline-color: #20345D; 
+   	outline-width: 3px;
+   	background-color: rgba(48, 186, 103);
+   	padding: 20px;
+   	display: inline-block;
+   }
+
+   .ongoing-events li {
+   	border: 1px solid #20345D;
+   	border-radius: 4px;
+   	display: inline-block;
+   	width: 46%;
+   	height: 100px;
+   	margin: 2%;
+   	padding: 28px 0;
+   	text-align: center;
+   	background: -webkit-linear-gradient(to bottom, #20345D, #30BA67);
+   	background: -moz-linear-gradient(to bottom, #20345D, #30BA67);
+   	background: linear-gradient(to bottom, #20345D, #30BA67);
+   }
+
+   .ongoing-events a {
+   	text-decoration: none;
+   	color: white;
+   	text-align: center;
+   	cursor: auto;
+   	border-radius: 4px;
+   	line-height: 2;
+   	font-weight: 900;
+   	letter-spacing: 2px;
+   	font-size: 1.8em;
+   }
+
+  /* Ongoing Events */
+
+   .ongoing-events h2 {
+   	font-size: 1.9em;
+   	color: rgb(32, 52, 93);
+   	font-weight: 700;
+   	line-height: 1.5;
+   	padding-bottom: 50px;
+   }
+
+	/* Event Page - Input Details */
+
+	  .input-team h2 {
+   	font-size: 1.9em;
+   	color: rgb(32, 52, 93);
+   	font-weight: 700;
+   	line-height: 1.5;
+		padding: 50px 0;
+	 }
+	 
+	 .input-team {
+		 display: none;
+	 }
+
+	 .member-lists {
+		 margin-bottom: 20px;
+	 }
+
+	 .member-display-list {
+		 display: flex;
+		 justify-content: space-between;
+		 width: 180px;
+		 align-items: center;
+	 }
+
+	 .member-list-in {
+		 display: inline-block;
+		 margin: 5px;
+		 font-size: 0.9rem;
+	 }
+
+	 i.fa-window-close {
+	 }

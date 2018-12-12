@@ -60,29 +60,33 @@ function addMembers(e) {
   var parentDiv = document.createElement("div")
   var childSpan = document.createElement("span");
   var childI = document.createElement("i");
-
+  
   childSpan.textContent = teamMembers.value;
   parentDiv.className = "member-display-list";
   childSpan.className = "member-list-in"
   childI.className = "delete-member far fa-window-close";
-
+  
   newArr.push(teamMembers.value);
+  
   displayMembers.appendChild(parentDiv);
   parentDiv.appendChild(childSpan);
   parentDiv.appendChild(childI);
-
-  console.log(childI.textContent);
   
+  var memberDelete = document.querySelectorAll(".delete-member");
 
-  var memberDelete = document.querySelector(".delete-member");
-  memberDelete.addEventListener("click", deleteMember);
-
+  for (item of memberDelete) {
+    item.addEventListener("click", removeMember);
+  }
 
   teamMembers.value = "";
 }
 
-function deleteMember(e) {  
-  
+function removeMember(e) {  
+  var deleteIndex = newArr.indexOf(this.previousElementSibling.innerText);
+  var node = e.target.parentNode;
+
+  newArr.splice(deleteIndex, 1);
+  node.parentNode.removeChild(node);
 }
 
 function submitEvent(e) {

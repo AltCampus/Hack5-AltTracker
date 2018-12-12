@@ -12,8 +12,32 @@
 	</head>
 	<body>
 		<!-- Header -->
-		<header class="header">
+		<header class="header cf">
+			<h1 class="header__logo"><img src="public/assets/media/logo.svg" alt="logo"></h1>
 			<div class="wrapper">
+				<h1 class="header__text">AltTracker</h1>
+				 <!-- Login Button Modal -->
+<!--             <input type="checkbox" id="final__click" style="display:none"/>
+            <label class="final__button" for="final__click">
+              <a class="button-theme">Click to launch modal</a>
+            </label> -->
+<!-- 					<form action="">
+            <div class="final__modal">
+              <label><b>Username</b></label>
+              <input type="text" placeholder="enter username"name="uname" required>
+              <label><b>Password</b></label>
+              <input type="password" placeholder="enter password"name="psw" required> -->
+              <button class="login__btn">LOGIN</button>
+              <!-- <input type="checkbox" checked="checked">Remember me
+      			</div>
+      			<div class="final__modal" style="background-color:#f1f1f1">
+      				<button class="cancel__btn">CANCEL</button>
+              <span class="psw">Forgot <a href="#">password?</a>
+              </span> -->
+<!--             </div>
+      		</form> -->
+
+      </div>
 				<nav class="nav">
 				<h1 class="header__logo"><img src="public/assets/media/logo.svg" alt="logo"><br></h1>
 				</nav>
@@ -21,7 +45,7 @@
 		</header>
 		<!-- Main -->
 		<main>
-		<!-- Add Event | Event Form -->	
+			<!-- Add Event | Event Form -->	
 			<section>
 				<div class="wrapper">
 					<div class="event">
@@ -33,7 +57,6 @@
     			</div>
 				</div>
 			</section>
-		
 			<!-- Event Page - Input Details -->
 			<section>
 				<div class="wrapper">
@@ -64,18 +87,36 @@
 						<h2>=== Ongoing Events ===</h2>
   						<ul class="ongoing-events__list">
 								<li><a href="#">HACKATHON</a></li><!-- 
-								 --><li><a href="#">TALK</a></li><!-- 
-								 --><li><a href="#">HOUSEKEEPING</a></li><!-- 
-								 --><li><a href="#">ENCORE</a></li>
+								--><li><a href="#">TALK</a></li><!-- 
+								--><li><a href="#">HOUSEKEEPING</a></li><!-- 
+								--><li><a href="#">ENCORE</a></li>
 							</ul>
     			</div>
 				</div>
 			</section>
-			<section id="display__events"></section>
+			<!-- Event Page - Input Details -->
+			<section>
+				<div class="wrapper">
+					<div class="input-team cf">
+						<h2>=== Event ===</h2>
+  						<form action="">
+  							<label for="team-name">Team Name</label>
+    						<input type="text" id="team-name" name="team-name"placeholder="enter team name">
+    						<label for="task-name">Task Name</label>
+    						<input type="text" id="task-name" name="task-name"placeholder="enter task name">
+    						<label for="team-members">Team Member</label>
+    						<input type="text" id="team-members" name="team-members"placeholder="enter member name">
+    						<button class="team__btn">ADD MEMBER</button><!-- 
+    						 --><button class="input-team__btn">ADD MORE TEAMS</button>
+    						<button class="submit__btn">SUBMIT</button>
+    					</form>
+    			</div>
+				</div>
+			</section>
 		</main>
 		<footer>
-			<div>
-				<small>&copy; ALL RIGHTS RESERVED.</small>
+			<div class="wrapper">
+				<small>&#169; 2018 | AltCampions | All Rights Reserved</small>
 			</div>
 		</footer>
 		<script type="text/javascript" src="public/assets/src/main.js"></script>

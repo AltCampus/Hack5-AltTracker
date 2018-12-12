@@ -144,13 +144,13 @@
    
    /* Modal Form */
 
-   form {
+/*   form {
       border: 3px solid #f1f1f1;
    }
 
    input [type=text], input {
       border: 3px solid #f1f1f1;
-   }
+   }*/
 
 
 
@@ -160,7 +160,7 @@
    label {
    	font-size: 1.7em;
    	font-weight: 700;
-      margin-top: 30px;
+      /*margin-top: 30px;*/
    	margin-left: 5px;
    	display: block;
    	color: rgb(32, 52, 93);
@@ -286,7 +286,6 @@
 
    /* 404 Page */
 
-
    .errormessage {
       font-size: 3.5em;
       background-color: rgb(32, 52, 93);
@@ -296,6 +295,3 @@
       padding-top: 20px;
       text-align: center;
    }
-
-
-}

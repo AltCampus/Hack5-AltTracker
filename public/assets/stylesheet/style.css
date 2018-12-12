@@ -31,7 +31,7 @@
    	display: block;
    }
    body {
-   	line-height: 1;
+		 line-height: 1;		 
    }
    ol, ul {
    	list-style: none;
@@ -89,6 +89,9 @@
    	font-family: 'Source Sans Pro', sans-serif;
    }
 
+	 input {
+		 color: #20345D;
+	 }
 
    .wrapper {
    	max-width: 680px;
@@ -136,7 +139,7 @@
    	display: block;
    	cursor: auto;
    	color: rgba(255, 255, 255, 0.60);
-   	color: white;
+   	color: darkblue;
    }
 
    /* Buttons */
@@ -269,4 +272,24 @@
 	 
 	 .input-team {
 		 display: none;
+	 }
+
+	 .member-lists {
+		 margin-bottom: 20px;
+	 }
+
+	 .member-display-list {
+		 display: flex;
+		 justify-content: space-between;
+		 width: 180px;
+		 align-items: center;
+	 }
+
+	 .member-list-in {
+		 display: inline-block;
+		 margin: 5px;
+		 font-size: 0.9rem;
+	 }
+
+	 i.fa-window-close {
 	 }

@@ -20,8 +20,9 @@ let event = {
 
 function addEvent(e) {
   e.preventDefault();
-  
-  
+    
+  if ( /^ *$/.test(eventName.value)) return;
+
   event.event_name = eventName.value;
   event.date = String(new Date());
   
@@ -34,42 +35,62 @@ function addEvent(e) {
 }
 
 
-function addTeams(e) {
-  
-  e.preventDefault();
-  
+function addTeams(e) {  
+  e.preventDefault();  
+
+  displayMembers.textContent = "";
   
   let team = teamName.value;
   let tName = taskName.value;  
+
+  console.log("new array :", newArr);
   
-  console.log(newArr);
   
   event.teams.push({teamMembers: newArr, team_name: team , team_task: tName, done: false });
 
+  console.log("add teams ", event);
   
   teamName.value = "";
+  taskName.value = "";
   newArr = [];
 }
 
 function addMembers(e) {
   e.preventDefault();
-  var newDiv = document.createElement("div");
-  // var i = document.createElement("i");
-  
-  newDiv.textContent = teamMembers.value;
-  // i.className = "fas fa-user-minus";
+  var parentDiv = document.createElement("div")
+  var childSpan = document.createElement("span");
+  var childI = document.createElement("i");
+
+  childSpan.textContent = teamMembers.value;
+  parentDiv.className = "member-display-list";
+  childSpan.className = "member-list-in"
+  childI.className = "delete-member far fa-window-close";
 
   newArr.push(teamMembers.value);
-  displayMembers.appendChild(newDiv);
-  // displayMembers.appendChild(i);
+  displayMembers.appendChild(parentDiv);
+  parentDiv.appendChild(childSpan);
+  parentDiv.appendChild(childI);
+
+  console.log(childI.textContent);
   
+
+  var memberDelete = document.querySelector(".delete-member");
+  memberDelete.addEventListener("click", deleteMember);
+
+
   teamMembers.value = "";
+}
+
+function deleteMember(e) {  
+  
 }
 
 function submitEvent(e) {
   e.preventDefault();
 
-  fetch('http://192.168.0.118:4001/', {
+  displayMembers.textContent = "";
+
+  fetch('http://192.168.43.69:4001/api/event', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -77,9 +98,12 @@ function submitEvent(e) {
     body: JSON.stringify(event)
   });
 
-  fetch('http://192.168.0.118:4001/').then(d => d.json()).then(d => console.log(d));
+  
+  fetch('http://192.168.43.69:4001/api/events').then(d => d.json()).then(d => console.log(d));
 
-  console.log("Submitted: ", event);
+  teamName.value = "";
+  taskName.value = "";
+  eventName.value = "";
 
   teamBlock.style.display = "none";  
   eventBlock.style.display = "block";

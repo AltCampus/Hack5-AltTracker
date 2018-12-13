@@ -141,19 +141,6 @@
       top: 30%;
       left: 93%;
    }
-   
-   /* Modal Form */
-
-/*   form {
-      border: 3px solid #f1f1f1;
-   }
-
-   input [type=text], input {
-      border: 3px solid #f1f1f1;
-   }
-
-*/
-
 
    /* Add Event | Event Form */
 
@@ -168,7 +155,6 @@
    }
 
 
-
    input[type=text], textarea {
       width: 100%; 
       padding: 20px;   
@@ -178,7 +164,6 @@
       margin-bottom: 15px; 
       display: block;
       cursor: auto;
-      color: rgba(255, 255, 255, 0.60);
       color: #20345D;
       font-size: 1.5em;
    }
@@ -199,24 +184,37 @@
       transition: 0.3s;
    }
 
+   #team-members{
+      width: 70%; 
+      padding: 20px;   
+      border: 1px solid #20345D; 
+      border-radius: 5px; 
+      margin-top: 6px; 
+      margin-bottom: 15px; 
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.60);
+      color: #20345D;
+      font-size: 1.5em;
+      display: inline-block;
+   }
+
    .team__btn {
-      margin-left: 50px;
-      margin-top: 20px;
-      width: 40%;
+      margin-left: 20px;
+      width: 27%;
+      display: inline-block;
    }
 
    .input-team__btn {
-      margin-left: 35px;
       margin-top: 20px;
-      width: 40%;
+      width: 35%;
    }
 
    .submit__btn {
       background: rgba(32, 52, 93, 0.8);
       margin-top: 30px;
-      margin-left: 210px;
-      width: 40%;
+      width: 35%;
       transition: 0.3s;
+      display: block;
    }
 
    .event__btn:hover,.team__btn:hover,.input-team__btn:hover,.login__btn:hover {background: rgba(48, 186, 103)}
@@ -230,7 +228,7 @@
       outline-style: double;
       outline-color: #20345D; 
       outline-width: 3px;
-      background-color: rgba(48, 186, 103);
+      background-color: rgb(48, 186, 103);
       padding: 20px;
       display: inline-block;
    }
@@ -262,12 +260,22 @@
       font-size: 1.8em;
    }
 
-   .ongoing-events h2,.input-team h2 {
+   .ongoing-events h2,.input-team h2,.event-details h2 {
       font-size: 1.9em;
       color: rgb(32, 52, 93);
       font-weight: 700;
-      line-height: 1.5;
-      padding: 50px 0;
+      line-height: 1;
+      padding: 40px 0;
+   }
+
+   /*  Event Page - Details Entered  */
+
+   .event-details h3 {
+      font-size: 1.7em;
+      color: #20345D;
+      font-weight: 700;
+      line-height: 1;
+      padding-bottom: 40px;
    }
 
    /* Footer */
